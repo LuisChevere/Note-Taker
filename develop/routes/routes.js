@@ -6,7 +6,7 @@ module.exports = app => {
         if (err) throw err;
         var notes = JSON.parse(data);
 
-        app.get("/api/notes/", function(res,req) {
+        app.get("/api/notes/", function(req,res) {
             res.JSON(notes);
         });
 
@@ -14,7 +14,7 @@ module.exports = app => {
             let newNote = req.body;
             notes.push(newNote);
             updateDB();
-            return console.log("New note added: "+newNote.title);
+            return console.log("New note added: "+ newNote.title);
         });
 
         app.get("/api/notes/:id", function(req,res) {
@@ -24,12 +24,16 @@ module.exports = app => {
         app.delete("/api/notes/:id", function(req,res) {
             notes.splice(req.params.id, 1);
             updateDB();
-            console.log("Note deleted, id "+req.params.id);
+            console.log("Note deleted, id " + req.params.id);
         });
 
         app.get('/notes', function(req,res) {
-            res.sendFile(path.join(__dirname, "../public/notes.html"));
+            res.sendFile(path.join(__dirname, "./notes.html"));
         });
+
+        app.get("*", function(req,res) {
+            res.sendFile(path.join(__dirname, "./index.html"));
+        })
 
         function updateDB() {
             fs.writeFile("db/db.json",JSON.stringify(notes,'\t'),err => {

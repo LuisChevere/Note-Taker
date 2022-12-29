@@ -1,4 +1,4 @@
-<h1 class="center">Team Profile Generator</h1>
+<h1 class="center">Note Taker Application</h1>
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)<br />
 

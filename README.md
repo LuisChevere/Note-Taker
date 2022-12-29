@@ -11,10 +11,10 @@
   - [Tests](#tests)
 
 ## Description
-  .<br />
+  This application's back end was created to connect to provided front end and allow users to add and delete notes for daily tasks.<br />
 
   ## Installation
-    No installation needed..<br />
+  No installation needed. <br />
 
   ## Usage
   This application can be used to create notes.<br />

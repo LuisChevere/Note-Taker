@@ -18,7 +18,7 @@
 
   ## Usage
   This application can be used to create notes.<br />
-  [link](https://note-app-lc.herokuapp.com/notes)<br />
+  [Deployed link here](https://note-app-lc.herokuapp.com/notes)<br />
   ![screenshot](https://github.com/LuisChevere/Note-Taker/blob/main/develop/public/assets/image/note-screenshot.png?raw=true)<br />
 
   ## Contributions
